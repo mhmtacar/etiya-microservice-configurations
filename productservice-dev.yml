@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: productservice
   datasource:
     url: jdbc:postgresql://postgresql:5432/product_db
     username: postgres
