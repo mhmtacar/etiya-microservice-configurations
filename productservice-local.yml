@@ -6,6 +6,17 @@ spring:
     username: postgres
     password: test
     driver-class-name: org.postgresql.Driver
+  kafka:
+    bootstrapServer: "localhost:9092"
+    consumer:
+      group-id: productService
+      keyDeserializer: org.apache.kafka.common.serialization.StringDeserializer
+      valueDeserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring:
+          json:
+            trusted:
+              packages: "*"
   jpa:
     hibernate:
       ddl-auto: update
