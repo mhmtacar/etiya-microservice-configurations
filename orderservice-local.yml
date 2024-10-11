@@ -3,6 +3,13 @@ server:
   data:
     mongodb:
       uri: "mongodb://localhost:27017/orderdb"
+  kafka:
+    bootstrapServer: "localhost:9092"
+    template:
+      default-topic: orderTopic
+    producer:
+      keySerializer: org.apache.kafka.common.serialization.StringSerializer
+      valueSerializer: org.springframework.kafka.support.serializer.JsonSerializer
 eureka:
   instance:
     hostname: localhost
