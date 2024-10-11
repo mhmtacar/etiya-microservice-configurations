@@ -1,5 +1,4 @@
-server:
-  port: 8082
+spring:
   data:
     mongodb:
       uri: "mongodb://localhost:27017/orderdb"
@@ -10,6 +9,8 @@ server:
     producer:
       keySerializer: org.apache.kafka.common.serialization.StringSerializer
       valueSerializer: org.springframework.kafka.support.serializer.JsonSerializer
+server:
+  port: 8082
 eureka:
   instance:
     hostname: localhost
