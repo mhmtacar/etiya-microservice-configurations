@@ -32,6 +32,8 @@ spring:
           cors-configurations:
             '[/**]':
               allowedOrigins: "http://localhost:4200"
+              allowedMethods: "*"
+              allowCredentials: true
 
 server:
   port: 8090
