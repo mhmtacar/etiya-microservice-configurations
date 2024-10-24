@@ -27,12 +27,9 @@ spring:
             uri: lb://userservice
             predicates:
               - Path=/api/auth/**
-web:
-  cors:
-    allowed-origin-patterns: "http://localhost:4200"
-    allowed-methods: GET, POST, PUT, DELETE
-    allow-credentials: true
-    allowed-headers: "*"
+            metadata:
+              cors:
+                allowedOrigins: 'http://localhost:4200'
 
 server:
   port: 8090
