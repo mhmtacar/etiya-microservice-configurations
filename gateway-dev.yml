@@ -28,10 +28,10 @@ spring:
             predicates:
               - Path=/api/auth/**
       globalcors:
+          add-to-simple-url-handler-mapping: true
           cors-configurations:
             '[/**]':
               allowedOrigins: "http://localhost:4200"
-              allowedHeaders: "*"
 
 server:
   port: 8090
