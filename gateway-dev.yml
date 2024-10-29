@@ -9,6 +9,8 @@ spring:
             uri: lb://customerservice # load-balancing
             predicates:
               - Path=/api/individualcustomers/**
+            filters:
+            - RewritePath=/customers/swagger-ui/index.html, /swagger-ui/index.html
           - id: product-service.routing
             uri: lb://productservice
             predicates:
@@ -27,19 +29,6 @@ spring:
             uri: lb://userservice
             predicates:
               - Path=/api/auth/**
-            # Swagger
-          - id: customer-service.swagger-ui
-            uri: lb://customerservice
-            predicates:
-              - Path=/customers/swagger-ui/index.html
-          - id: product-service.swagger-ui
-            uri: lb://productservice
-            predicates:
-              - Path=/products/swagger-ui/index.html
-          - id: user-service.swagger-ui
-            uri: lb://userservice
-            predicates:
-              - Path=/auth/swagger-ui/index.html
 
 server:
   port: 8090
