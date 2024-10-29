@@ -2,6 +2,11 @@ spring:
   data:
     mongodb:
       uri: "mongodb://localhost:27017/orderdb"
+springdoc:
+  api-docs:
+    path: /orderservice/v3/api-docs
+  swagger-ui:
+    path: /orderservice/swagger-ui.html
 server:
   port: 8082
 eureka:
