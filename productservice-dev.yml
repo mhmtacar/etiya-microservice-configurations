@@ -13,7 +13,11 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
-
+springdoc:
+  api-docs:
+    path: /productservice/v3/api-docs
+  swagger-ui:
+    path: /productservice/swagger-ui.html
 server:
   port: 8080
 
