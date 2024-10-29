@@ -10,6 +10,13 @@ spring:
     showSql: true
     hibernate:
       ddlAuto: update
+      
+springdoc:
+  api-docs:
+    path: /userservice/v3/api-docs
+  swagger-ui:
+    path: /userservice/swagger-ui.html
+    
 server:
   port: 8083
 
