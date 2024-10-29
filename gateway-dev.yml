@@ -32,7 +32,7 @@ spring:
           - id: customer-service.api-docs
             uri: lb://customerservice
             predicates:
-              - Path=/v3/api-docs/**
+              - Path=/customerservice/v3/api-docs/**
             filters:
               - RewritePath=/customerservice/v3/api-docs/(?<segment>.*), /v3/api-docs/$\{segment}
 
@@ -53,7 +53,7 @@ spring:
           - id: customer-service.swagger-ui
             uri: lb://customerservice
             predicates:
-              - Path=/swagger-ui/**
+              - Path=/customerservice/swagger-ui/**
             filters:
               - RewritePath=/customerservice/swagger-ui/(?<segment>.*), /swagger-ui/$\{segment}
               
