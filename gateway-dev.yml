@@ -27,6 +27,31 @@ spring:
             uri: lb://userservice
             predicates:
               - Path=/api/auth/**
+            # Swagger
+          - id: customer-service.swagger
+            uri: lb://customerservice
+            predicates:
+              - Path=/api/individualcustomers/v3/api-docs
+          - id: product-service.swagger
+            uri: lb://productservice
+            predicates:
+              - Path=/api/products/v3/api-docs
+          - id: user-service.swagger
+            uri: lb://userservice
+            predicates:
+              - Path=/api/auth/v3/api-docs
+          - id: customer-service.swagger-ui
+            uri: lb://customerservice
+            predicates:
+              - Path=/api/individualcustomers/swagger-ui.html
+          - id: product-service.swagger-ui
+            uri: lb://productservice
+            predicates:
+              - Path=/api/products/swagger-ui.html
+          - id: user-service.swagger-ui
+            uri: lb://userservice
+            predicates:
+              - Path=/api/auth/swagger-ui.html
 
 server:
   port: 8090
