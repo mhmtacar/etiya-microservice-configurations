@@ -15,9 +15,9 @@ spring:
         dialect: org.hibernate.dialect.MySQL8Dialect
 springdoc:
   api-docs:
-    path: /customer-service/v3/api-docs
+    path: /customerservice/v3/api-docs
   swagger-ui:
-    path: /customer-service/swagger-ui.html
+    path: /customerservice/swagger-ui.html
 
 server:
   port: 8081
