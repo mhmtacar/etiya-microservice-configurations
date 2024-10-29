@@ -43,7 +43,7 @@ spring:
           - id: customer-service.swagger-ui
             uri: lb://customerservice
             predicates:
-              - Path=/api/individualcustomers/swagger-ui.html
+              - Path=/api/customerservice/swagger-ui/index.html
           - id: product-service.swagger-ui
             uri: lb://productservice
             predicates:
