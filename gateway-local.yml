@@ -8,7 +8,8 @@ spring:
           - id: customer-service.routing
             uri: lb://customerservice # load-balancing
             predicates:
-              - Path=/api/**
+              - Path=/api/individualcustomers/**
+              - Path=/api/adresses/**
           - id: product-service.routing
             uri: lb://productservice
             predicates:
@@ -23,6 +24,10 @@ spring:
             uri: ${eureka.url}
             predicates:
               - Path=/eureka/**
+          - id: user-service.routing
+            uri: lb://userservice
+            predicates:
+              - Path=/api/auth/**
 
 server:
   port: 8090
