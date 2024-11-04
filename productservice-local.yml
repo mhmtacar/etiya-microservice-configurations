@@ -21,7 +21,7 @@ spring:
         binder:
           brokers: localhost:9092
           consumerProperties:
-            group.id: customer-service-group
+            group.id: product-service-group
   jpa:
     hibernate:
       ddl-auto: update
